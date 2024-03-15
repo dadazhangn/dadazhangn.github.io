@@ -29,6 +29,56 @@ w:Rock-y did-nt like that</div>
       </tags>
   </entry>
   <entry>
+    <title>这是一个demo</title>
+    <url>/2023/10/26/demo/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+      <categories>
+        <category>demo</category>
+      </categories>
+      <tags>
+        <tag>demo</tag>
+        <tag>示例</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>出师表</title>
+    <url>/2024/02/08/page/</url>
+    <content><![CDATA[<p>臣亮言：<mark class="hl-label default">先帝</mark> 创业未半，而<mark class="hl-label blue">中道崩殂</mark> 。今天下三分，<mark class="hl-label pink">益州疲敝</mark> ，此诚<mark class="hl-label red">危急存亡之秋</mark> 也！然侍衞之臣，不懈于内；<mark class="hl-label purple">忠志之士</mark> ，忘身于外者，盖追先帝之殊遇，欲报之于陛下也。诚宜开张圣听，以光先帝遗德，恢弘志士之气；不宜妄自菲薄，引喻失义，以塞忠谏之路也。<br>宫中、府中，俱为一体；陟罚臧否，不宜异同。若有<mark class="hl-label orange">作奸</mark> 、<mark class="hl-label green">犯科</mark> ，及为忠善者，宜付有司，论其刑赏，以昭陛下平明之治；不宜偏私，使内外异法也。</p>
+<div class="timeline pink"><div class='timeline-item headline'><div class='timeline-item-title'><div class='item-circle'><p>2022</p>
+</div></div></div><div class='timeline-item'><div class='timeline-item-title'><div class='item-circle'><p>01-02</p>
+</div></div><div class='timeline-item-content'><p>这是测试页面</p>
+</div></div></div>
+<div class="mermaid-wrap"><pre class="mermaid-src" hidden>
+  
+pie
+    title Key elements in Product X
+    &quot;Calcium&quot; : 42.96
+    &quot;Potassium&quot; : 50.05
+    &quot;Magnesium&quot; : 10.01
+    &quot;Iron&quot; :  5
+  </pre></div>
+<p>你看我长得漂亮不</p>
+<p><img src="https://i.loli.net/2021/03/19/2P6ivUGsdaEXSFI.png" alt=""></p>
+<p>我觉得很漂亮 <img class="inline-img" src="https://i.loli.net/2021/03/19/5M4jUB3ynq7ePgw.png" style="height:150px" /></p>
+]]></content>
+      <categories>
+        <category>demo</category>
+      </categories>
+      <tags>
+        <tag>demo</tag>
+        <tag>出师表</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>zfb+wx自动刷取步数</title>
     <url>/2024/02/27/auto_step/</url>
     <content><![CDATA[<h2 id="一、ZeepLife准备"><a href="#一、ZeepLife准备" class="headerlink" title="一、ZeepLife准备"></a>一、ZeepLife准备</h2><ol>
@@ -69,27 +119,6 @@ w:Rock-y did-nt like that</div>
       </tags>
   </entry>
   <entry>
-    <title>这是一个demo</title>
-    <url>/2023/10/26/demo/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-      <categories>
-        <category>demo</category>
-      </categories>
-      <tags>
-        <tag>demo</tag>
-        <tag>示例</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>优化jiba分词效率Demo</title>
     <url>/2024/02/09/jieba/</url>
     <content><![CDATA[<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> time</span><br><span class="line"><span class="keyword">import</span> jieba</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">split_words</span>(<span class="params">content_list, stopword_set</span>):</span><br><span class="line">    cut_words_list = []</span><br><span class="line">    start_time = time.time()</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> mail <span class="keyword">in</span> content_list:</span><br><span class="line">        <span class="comment"># 使用 jieba.lcut_for_search 替代 jieba.lcut</span></span><br><span class="line">        cut_words = jieba.lcut_for_search(mail)</span><br><span class="line">        <span class="comment"># 使用集合进行停用词检查</span></span><br><span class="line">        cut_words = [word <span class="keyword">for</span> word <span class="keyword">in</span> cut_words <span class="keyword">if</span> word <span class="keyword">not</span> <span class="keyword">in</span> stopword_set]</span><br><span class="line">        cut_words_list.append(cut_words)</span><br><span class="line"></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;jieba分词用时%.2f秒&#x27;</span> % (time.time() - start_time))</span><br><span class="line">    <span class="keyword">return</span> cut_words_list</span><br></pre></td></tr></table></figure>
@@ -102,35 +131,6 @@ w:Rock-y did-nt like that</div>
         <tag>demo</tag>
         <tag>Jieba</tag>
         <tag>主题</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>出师表</title>
-    <url>/2024/02/08/page/</url>
-    <content><![CDATA[<p>臣亮言：<mark class="hl-label default">先帝</mark> 创业未半，而<mark class="hl-label blue">中道崩殂</mark> 。今天下三分，<mark class="hl-label pink">益州疲敝</mark> ，此诚<mark class="hl-label red">危急存亡之秋</mark> 也！然侍衞之臣，不懈于内；<mark class="hl-label purple">忠志之士</mark> ，忘身于外者，盖追先帝之殊遇，欲报之于陛下也。诚宜开张圣听，以光先帝遗德，恢弘志士之气；不宜妄自菲薄，引喻失义，以塞忠谏之路也。<br>宫中、府中，俱为一体；陟罚臧否，不宜异同。若有<mark class="hl-label orange">作奸</mark> 、<mark class="hl-label green">犯科</mark> ，及为忠善者，宜付有司，论其刑赏，以昭陛下平明之治；不宜偏私，使内外异法也。</p>
-<div class="timeline pink"><div class='timeline-item headline'><div class='timeline-item-title'><div class='item-circle'><p>2022</p>
-</div></div></div><div class='timeline-item'><div class='timeline-item-title'><div class='item-circle'><p>01-02</p>
-</div></div><div class='timeline-item-content'><p>这是测试页面</p>
-</div></div></div>
-<div class="mermaid-wrap"><pre class="mermaid-src" hidden>
-  
-pie
-    title Key elements in Product X
-    &quot;Calcium&quot; : 42.96
-    &quot;Potassium&quot; : 50.05
-    &quot;Magnesium&quot; : 10.01
-    &quot;Iron&quot; :  5
-  </pre></div>
-<p>你看我长得漂亮不</p>
-<p><img src="https://i.loli.net/2021/03/19/2P6ivUGsdaEXSFI.png" alt=""></p>
-<p>我觉得很漂亮 <img class="inline-img" src="https://i.loli.net/2021/03/19/5M4jUB3ynq7ePgw.png" style="height:150px" /></p>
-]]></content>
-      <categories>
-        <category>demo</category>
-      </categories>
-      <tags>
-        <tag>demo</tag>
-        <tag>出师表</tag>
       </tags>
   </entry>
   <entry>
