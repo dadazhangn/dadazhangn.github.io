@@ -1,34 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>普西拉之歌</title>
-    <url>/2024/02/14/Priscilla/</url>
-    <content><![CDATA[<div class="abc-music-sheet">X:1
-T:alternate heads
-M:C
-L:1/8
-U:n=!style=normal!
-K:C treble style=rhythm
-&quot;Am&quot; BBBB B2 B&gt;B | &quot;Dm&quot; B2 B/B/B &quot;C&quot; B4 |&quot;Am&quot; B2 nGnB B2 nGnA | &quot;Dm&quot; nDB/B/ nDB/B/ &quot;C&quot; nCB/B/ nCB/B/ |B8| B0 B0 B0 B0 |]
-%%text This translates to:
-[M:C][K:style=normal]
-[A,EAce][A,EAce][A,EAce][A,EAce] [A,EAce]2 [A,EAce]&gt;[A,EAce] |[DAdf]2 [DAdf]/[DAdf]/[DAdf] [CEGce]4 |[A,EAce]2 GA [A,EAce] GA |D[DAdf]/[DAdf]/ D[DAdf]/[DAdf]/ C [CEGce]/[CEGce]/ C[CEGce]/[CEGce]/ |[CEGce]8 | [CEGce]2 [CEGce]2 [CEGce]2 [CEGce]2 |]
-GAB2 !style=harmonic![gb]4|GAB2 [K: style=harmonic]gbgb|
-[K: style=x]
-C/A,/ C/C/E C/zz2|
-w:Rock-y did-nt like that</div>
-<h1 id="Priscilla-the-Callonetta’s-song"><a href="#Priscilla-the-Callonetta’s-song" class="headerlink" title="Priscilla the Callonetta’s song"></a>Priscilla the Callonetta’s song</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">陈年的伤痕 渴望温柔碰触</span><br><span class="line">依依缠绵 罔顾星象命数</span><br><span class="line">撕裂的心扉 你用爱缝补</span><br><span class="line">这缱绻交织命途 你我共偿赎</span><br><span class="line"></span><br><span class="line">晨曦 你自梦境逃离</span><br><span class="line">空余丁香与醋栗香气</span><br><span class="line">鸦羽般的秀发 在梦境中翻飞</span><br><span class="line">紫罗兰的眼 粼粼中哀泣 </span><br><span class="line"></span><br><span class="line">我愿随狼踪 踏入风暴汹涌</span><br><span class="line">寻觅真心 哪怕爱已成空</span><br><span class="line">即使这颗心 如磐石坚硬</span><br><span class="line">我仍拥抱你 无论天寒地冻 </span><br><span class="line"></span><br><span class="line">晨曦 你自梦境逃离</span><br><span class="line">空余丁香与醋栗香气</span><br><span class="line">鸦羽般的秀发 在梦境中翻飞</span><br><span class="line">紫罗兰的眼 粼粼中哀泣</span><br><span class="line"></span><br><span class="line">是否因命运 我们形影相逐</span><br><span class="line">又或爱太盲目 才甘受束缚</span><br><span class="line">故事的最初 心愿的低诉</span><br><span class="line">这不由自主倾慕 难道终碌碌 </span><br><span class="line"></span><br><span class="line">晨曦 你自梦境逃离</span><br><span class="line">空余丁香与醋栗香气</span><br><span class="line">鸦羽般的秀发 在梦境中翻飞</span><br><span class="line">紫罗兰的眼 粼粼中哀泣</span><br></pre></td></tr></table></figure>
-<p>  <img src="https://s2.loli.net/2024/02/14/rqKEl4s3c8JDQmo.jpg" alt=""><br>  <img src="https://s2.loli.net/2024/02/15/ijQGDFWdpcRsE2e.gif" alt=""><br>  <img src="https://s2.loli.net/2024/02/15/3I4aY8lsSTCcrjO.gif" alt=""><br>    <mark class="hl-label red">我永远热爱珍珠翡翠白玉汤</mark>  <img class="inline-img" src="https://s2.loli.net/2024/02/14/3eaMTF7BzvwSQfd.jpg" style="height:150px" /></p>
-]]></content>
-      <categories>
-        <category>游戏</category>
-      </categories>
-      <tags>
-        <tag>巫师三</tag>
-        <tag>歌词</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>zfb+wx自动刷取步数</title>
     <url>/2024/02/27/auto_step/</url>
     <content><![CDATA[<h2 id="一、ZeepLife准备"><a href="#一、ZeepLife准备" class="headerlink" title="一、ZeepLife准备"></a>一、ZeepLife准备</h2><ol>
@@ -90,34 +62,31 @@ w:Rock-y did-nt like that</div>
       </tags>
   </entry>
   <entry>
-    <title>迪杰斯特拉算法</title>
-    <url>/2024/02/08/dijkstra/</url>
-    <content><![CDATA[<h2 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h2><p> 将起始节点标记为已访问，并将其距离设为 0。将所有其他节点的距离设为无穷大，表示未知距离。将一个空的优先级队列用于存储待处理的节点，并将起始节点放入队列中。</p>
-<h2 id="迭代"><a href="#迭代" class="headerlink" title="迭代"></a>迭代</h2><p>  1、从优先级队列中选择距离最短的节点。<br>  2、对于该节点的每个邻居节点，计算从起始节点到该邻居节点的距离。如果经过当前节点到达邻居节点的路径距离比已知的距离短，则更新邻居节点的距离，并将其添加到优先级队列中。</p>
-<h2 id="最终结果"><a href="#最终结果" class="headerlink" title="最终结果"></a>最终结果</h2><p>   当优先级队列为空时，所有节点的最短路径都已经计算完成。可以从起始节点到每个节点的距离信息中获取最短路径。</p>
-<p>Dijkstra 算法的时间复杂度取决于使用的数据结构。当使用最小堆实现优先级队列时，Dijkstra 算法的时间复杂度为 O((V+E)logV)，其中 V 是节点数量，E 是边数量。</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> heapq</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">dijkstra</span>(<span class="params">graph, start</span>):</span><br><span class="line">    <span class="comment"># 初始化节点到起始节点的距离为无穷大</span></span><br><span class="line">    distances = &#123;node: <span class="built_in">float</span>(<span class="string">&#x27;inf&#x27;</span>) <span class="keyword">for</span> node <span class="keyword">in</span> graph&#125;</span><br><span class="line">    <span class="comment"># 起始节点到自身的距离为 0    </span></span><br><span class="line">    distances[start] = <span class="number">0</span></span><br><span class="line">    </span><br><span class="line">    <span class="comment"># 使用优先级队列存储节点和其对应的距离</span></span><br><span class="line">    priority_queue = [(<span class="number">0</span>, start)]</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> priority_queue:</span><br><span class="line">        <span class="comment"># 从优先级队列中取出当前距离最短的节点</span></span><br><span class="line">        current_distance, current_node = heapq.heappop(priority_queue)</span><br><span class="line"></span><br><span class="line">        <span class="comment"># 如果当前节点的距离大于已知距离，则跳过</span></span><br><span class="line">        <span class="keyword">if</span> current_distance &gt; distances[current_node]:</span><br><span class="line">            <span class="keyword">continue</span></span><br><span class="line"></span><br><span class="line">        <span class="comment"># 遍历当前节点的邻居节点</span></span><br><span class="line">        <span class="keyword">for</span> neighbor, weight <span class="keyword">in</span> graph[current_node].items():</span><br><span class="line">            <span class="comment"># 计算从起始节点到邻居节点的距离</span></span><br><span class="line">            distance = current_distance + weight</span><br><span class="line">            <span class="comment"># 如果经过当前节点到达邻居节点的距离比已知的距离短，则更新邻居节点的距离</span></span><br><span class="line">            <span class="keyword">if</span> distance &lt; distances[neighbor]:</span><br><span class="line">                distances[neighbor] = distance</span><br><span class="line">                <span class="comment"># 将邻居节点加入优先级队列中</span></span><br><span class="line">                heapq.heappush(priority_queue, (distance, neighbor))</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> distances</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<h1 id="示例图"><a href="#示例图" class="headerlink" title="示例图"></a>示例图</h1><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">  graph = &#123;</span><br><span class="line">      <span class="string">&#x27;A&#x27;</span>: &#123;<span class="string">&#x27;B&#x27;</span>: <span class="number">1</span>, <span class="string">&#x27;C&#x27;</span>: <span class="number">4</span>&#125;,</span><br><span class="line">      <span class="string">&#x27;B&#x27;</span>: &#123;<span class="string">&#x27;A&#x27;</span>: <span class="number">1</span>, <span class="string">&#x27;C&#x27;</span>: <span class="number">2</span>, <span class="string">&#x27;D&#x27;</span>: <span class="number">5</span>&#125;,</span><br><span class="line">      <span class="string">&#x27;C&#x27;</span>: &#123;<span class="string">&#x27;A&#x27;</span>: <span class="number">4</span>, <span class="string">&#x27;B&#x27;</span>: <span class="number">2</span>, <span class="string">&#x27;D&#x27;</span>: <span class="number">1</span>&#125;,</span><br><span class="line">      <span class="string">&#x27;D&#x27;</span>: &#123;<span class="string">&#x27;B&#x27;</span>: <span class="number">5</span>, <span class="string">&#x27;C&#x27;</span>: <span class="number">1</span>&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">  start_node = <span class="string">&#x27;A&#x27;</span></span><br><span class="line">  shortest_distances = dijkstra(graph, start_node)</span><br><span class="line">  <span class="built_in">print</span>(<span class="string">&quot;Shortest distances from node&quot;</span>, start_node + <span class="string">&quot;:&quot;</span>)</span><br><span class="line">  <span class="built_in">print</span>(shortest_distances)</span><br></pre></td></tr></table></figure>]]></content>
+    <title>普西拉之歌</title>
+    <url>/2024/02/14/Priscilla/</url>
+    <content><![CDATA[<div class="abc-music-sheet">X:1
+T:alternate heads
+M:C
+L:1/8
+U:n=!style=normal!
+K:C treble style=rhythm
+&quot;Am&quot; BBBB B2 B&gt;B | &quot;Dm&quot; B2 B/B/B &quot;C&quot; B4 |&quot;Am&quot; B2 nGnB B2 nGnA | &quot;Dm&quot; nDB/B/ nDB/B/ &quot;C&quot; nCB/B/ nCB/B/ |B8| B0 B0 B0 B0 |]
+%%text This translates to:
+[M:C][K:style=normal]
+[A,EAce][A,EAce][A,EAce][A,EAce] [A,EAce]2 [A,EAce]&gt;[A,EAce] |[DAdf]2 [DAdf]/[DAdf]/[DAdf] [CEGce]4 |[A,EAce]2 GA [A,EAce] GA |D[DAdf]/[DAdf]/ D[DAdf]/[DAdf]/ C [CEGce]/[CEGce]/ C[CEGce]/[CEGce]/ |[CEGce]8 | [CEGce]2 [CEGce]2 [CEGce]2 [CEGce]2 |]
+GAB2 !style=harmonic![gb]4|GAB2 [K: style=harmonic]gbgb|
+[K: style=x]
+C/A,/ C/C/E C/zz2|
+w:Rock-y did-nt like that</div>
+<h1 id="Priscilla-the-Callonetta’s-song"><a href="#Priscilla-the-Callonetta’s-song" class="headerlink" title="Priscilla the Callonetta’s song"></a>Priscilla the Callonetta’s song</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">陈年的伤痕 渴望温柔碰触</span><br><span class="line">依依缠绵 罔顾星象命数</span><br><span class="line">撕裂的心扉 你用爱缝补</span><br><span class="line">这缱绻交织命途 你我共偿赎</span><br><span class="line"></span><br><span class="line">晨曦 你自梦境逃离</span><br><span class="line">空余丁香与醋栗香气</span><br><span class="line">鸦羽般的秀发 在梦境中翻飞</span><br><span class="line">紫罗兰的眼 粼粼中哀泣 </span><br><span class="line"></span><br><span class="line">我愿随狼踪 踏入风暴汹涌</span><br><span class="line">寻觅真心 哪怕爱已成空</span><br><span class="line">即使这颗心 如磐石坚硬</span><br><span class="line">我仍拥抱你 无论天寒地冻 </span><br><span class="line"></span><br><span class="line">晨曦 你自梦境逃离</span><br><span class="line">空余丁香与醋栗香气</span><br><span class="line">鸦羽般的秀发 在梦境中翻飞</span><br><span class="line">紫罗兰的眼 粼粼中哀泣</span><br><span class="line"></span><br><span class="line">是否因命运 我们形影相逐</span><br><span class="line">又或爱太盲目 才甘受束缚</span><br><span class="line">故事的最初 心愿的低诉</span><br><span class="line">这不由自主倾慕 难道终碌碌 </span><br><span class="line"></span><br><span class="line">晨曦 你自梦境逃离</span><br><span class="line">空余丁香与醋栗香气</span><br><span class="line">鸦羽般的秀发 在梦境中翻飞</span><br><span class="line">紫罗兰的眼 粼粼中哀泣</span><br></pre></td></tr></table></figure>
+<p>  <img src="https://s2.loli.net/2024/02/14/rqKEl4s3c8JDQmo.jpg" alt=""><br>  <img src="https://s2.loli.net/2024/02/15/ijQGDFWdpcRsE2e.gif" alt=""><br>  <img src="https://s2.loli.net/2024/02/15/3I4aY8lsSTCcrjO.gif" alt=""><br>    <mark class="hl-label red">我永远热爱珍珠翡翠白玉汤</mark>  <img class="inline-img" src="https://s2.loli.net/2024/02/14/3eaMTF7BzvwSQfd.jpg" style="height:150px" /></p>
+]]></content>
       <categories>
-        <category>算法</category>
+        <category>游戏</category>
       </categories>
       <tags>
-        <tag>Dijkstra</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>优化jiba分词效率Demo</title>
-    <url>/2024/02/09/jieba/</url>
-    <content><![CDATA[<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> time</span><br><span class="line"><span class="keyword">import</span> jieba</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">split_words</span>(<span class="params">content_list, stopword_set</span>):</span><br><span class="line">    cut_words_list = []</span><br><span class="line">    start_time = time.time()</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> mail <span class="keyword">in</span> content_list:</span><br><span class="line">        <span class="comment"># 使用 jieba.lcut_for_search 替代 jieba.lcut</span></span><br><span class="line">        cut_words = jieba.lcut_for_search(mail)</span><br><span class="line">        <span class="comment"># 使用集合进行停用词检查</span></span><br><span class="line">        cut_words = [word <span class="keyword">for</span> word <span class="keyword">in</span> cut_words <span class="keyword">if</span> word <span class="keyword">not</span> <span class="keyword">in</span> stopword_set]</span><br><span class="line">        cut_words_list.append(cut_words)</span><br><span class="line"></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;jieba分词用时%.2f秒&#x27;</span> % (time.time() - start_time))</span><br><span class="line">    <span class="keyword">return</span> cut_words_list</span><br></pre></td></tr></table></figure>
-<h1 id="示例用法"><a href="#示例用法" class="headerlink" title="示例用法"></a>示例用法</h1><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">content_list = [<span class="string">&quot;邮件1的内容&quot;</span>, <span class="string">&quot;邮件2的内容&quot;</span>, <span class="string">&quot;邮件3的内容&quot;</span>]</span><br><span class="line">stopword_list = [<span class="string">&quot;停用词1&quot;</span>, <span class="string">&quot;停用词2&quot;</span>, <span class="string">&quot;停用词3&quot;</span>]</span><br><span class="line">stopword_set = <span class="built_in">set</span>(stopword_list)</span><br><span class="line"></span><br><span class="line">result = split_words(content_list, stopword_set)</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>教程</category>
-        <category>Jieba</category>
-      </categories>
-      <tags>
-        <tag>demo</tag>
-        <tag>Jieba</tag>
-        <tag>主题</tag>
+        <tag>巫师三</tag>
+        <tag>歌词</tag>
       </tags>
   </entry>
   <entry>
@@ -147,6 +116,37 @@ pie
       <tags>
         <tag>demo</tag>
         <tag>出师表</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>迪杰斯特拉算法</title>
+    <url>/2024/02/08/dijkstra/</url>
+    <content><![CDATA[<h2 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h2><p> 将起始节点标记为已访问，并将其距离设为 0。将所有其他节点的距离设为无穷大，表示未知距离。将一个空的优先级队列用于存储待处理的节点，并将起始节点放入队列中。</p>
+<h2 id="迭代"><a href="#迭代" class="headerlink" title="迭代"></a>迭代</h2><p>  1、从优先级队列中选择距离最短的节点。<br>  2、对于该节点的每个邻居节点，计算从起始节点到该邻居节点的距离。如果经过当前节点到达邻居节点的路径距离比已知的距离短，则更新邻居节点的距离，并将其添加到优先级队列中。</p>
+<h2 id="最终结果"><a href="#最终结果" class="headerlink" title="最终结果"></a>最终结果</h2><p>   当优先级队列为空时，所有节点的最短路径都已经计算完成。可以从起始节点到每个节点的距离信息中获取最短路径。</p>
+<p>Dijkstra 算法的时间复杂度取决于使用的数据结构。当使用最小堆实现优先级队列时，Dijkstra 算法的时间复杂度为 O((V+E)logV)，其中 V 是节点数量，E 是边数量。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> heapq</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">dijkstra</span>(<span class="params">graph, start</span>):</span><br><span class="line">    <span class="comment"># 初始化节点到起始节点的距离为无穷大</span></span><br><span class="line">    distances = &#123;node: <span class="built_in">float</span>(<span class="string">&#x27;inf&#x27;</span>) <span class="keyword">for</span> node <span class="keyword">in</span> graph&#125;</span><br><span class="line">    <span class="comment"># 起始节点到自身的距离为 0    </span></span><br><span class="line">    distances[start] = <span class="number">0</span></span><br><span class="line">    </span><br><span class="line">    <span class="comment"># 使用优先级队列存储节点和其对应的距离</span></span><br><span class="line">    priority_queue = [(<span class="number">0</span>, start)]</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> priority_queue:</span><br><span class="line">        <span class="comment"># 从优先级队列中取出当前距离最短的节点</span></span><br><span class="line">        current_distance, current_node = heapq.heappop(priority_queue)</span><br><span class="line"></span><br><span class="line">        <span class="comment"># 如果当前节点的距离大于已知距离，则跳过</span></span><br><span class="line">        <span class="keyword">if</span> current_distance &gt; distances[current_node]:</span><br><span class="line">            <span class="keyword">continue</span></span><br><span class="line"></span><br><span class="line">        <span class="comment"># 遍历当前节点的邻居节点</span></span><br><span class="line">        <span class="keyword">for</span> neighbor, weight <span class="keyword">in</span> graph[current_node].items():</span><br><span class="line">            <span class="comment"># 计算从起始节点到邻居节点的距离</span></span><br><span class="line">            distance = current_distance + weight</span><br><span class="line">            <span class="comment"># 如果经过当前节点到达邻居节点的距离比已知的距离短，则更新邻居节点的距离</span></span><br><span class="line">            <span class="keyword">if</span> distance &lt; distances[neighbor]:</span><br><span class="line">                distances[neighbor] = distance</span><br><span class="line">                <span class="comment"># 将邻居节点加入优先级队列中</span></span><br><span class="line">                heapq.heappush(priority_queue, (distance, neighbor))</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> distances</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h1 id="示例图"><a href="#示例图" class="headerlink" title="示例图"></a>示例图</h1><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">  graph = &#123;</span><br><span class="line">      <span class="string">&#x27;A&#x27;</span>: &#123;<span class="string">&#x27;B&#x27;</span>: <span class="number">1</span>, <span class="string">&#x27;C&#x27;</span>: <span class="number">4</span>&#125;,</span><br><span class="line">      <span class="string">&#x27;B&#x27;</span>: &#123;<span class="string">&#x27;A&#x27;</span>: <span class="number">1</span>, <span class="string">&#x27;C&#x27;</span>: <span class="number">2</span>, <span class="string">&#x27;D&#x27;</span>: <span class="number">5</span>&#125;,</span><br><span class="line">      <span class="string">&#x27;C&#x27;</span>: &#123;<span class="string">&#x27;A&#x27;</span>: <span class="number">4</span>, <span class="string">&#x27;B&#x27;</span>: <span class="number">2</span>, <span class="string">&#x27;D&#x27;</span>: <span class="number">1</span>&#125;,</span><br><span class="line">      <span class="string">&#x27;D&#x27;</span>: &#123;<span class="string">&#x27;B&#x27;</span>: <span class="number">5</span>, <span class="string">&#x27;C&#x27;</span>: <span class="number">1</span>&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">  start_node = <span class="string">&#x27;A&#x27;</span></span><br><span class="line">  shortest_distances = dijkstra(graph, start_node)</span><br><span class="line">  <span class="built_in">print</span>(<span class="string">&quot;Shortest distances from node&quot;</span>, start_node + <span class="string">&quot;:&quot;</span>)</span><br><span class="line">  <span class="built_in">print</span>(shortest_distances)</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>算法</category>
+      </categories>
+      <tags>
+        <tag>Dijkstra</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>优化jiba分词效率Demo</title>
+    <url>/2024/02/09/jieba/</url>
+    <content><![CDATA[<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> time</span><br><span class="line"><span class="keyword">import</span> jieba</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">split_words</span>(<span class="params">content_list, stopword_set</span>):</span><br><span class="line">    cut_words_list = []</span><br><span class="line">    start_time = time.time()</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> mail <span class="keyword">in</span> content_list:</span><br><span class="line">        <span class="comment"># 使用 jieba.lcut_for_search 替代 jieba.lcut</span></span><br><span class="line">        cut_words = jieba.lcut_for_search(mail)</span><br><span class="line">        <span class="comment"># 使用集合进行停用词检查</span></span><br><span class="line">        cut_words = [word <span class="keyword">for</span> word <span class="keyword">in</span> cut_words <span class="keyword">if</span> word <span class="keyword">not</span> <span class="keyword">in</span> stopword_set]</span><br><span class="line">        cut_words_list.append(cut_words)</span><br><span class="line"></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;jieba分词用时%.2f秒&#x27;</span> % (time.time() - start_time))</span><br><span class="line">    <span class="keyword">return</span> cut_words_list</span><br></pre></td></tr></table></figure>
+<h1 id="示例用法"><a href="#示例用法" class="headerlink" title="示例用法"></a>示例用法</h1><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">content_list = [<span class="string">&quot;邮件1的内容&quot;</span>, <span class="string">&quot;邮件2的内容&quot;</span>, <span class="string">&quot;邮件3的内容&quot;</span>]</span><br><span class="line">stopword_list = [<span class="string">&quot;停用词1&quot;</span>, <span class="string">&quot;停用词2&quot;</span>, <span class="string">&quot;停用词3&quot;</span>]</span><br><span class="line">stopword_set = <span class="built_in">set</span>(stopword_list)</span><br><span class="line"></span><br><span class="line">result = split_words(content_list, stopword_set)</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>教程</category>
+        <category>Jieba</category>
+      </categories>
+      <tags>
+        <tag>demo</tag>
+        <tag>Jieba</tag>
+        <tag>主题</tag>
       </tags>
   </entry>
   <entry>
