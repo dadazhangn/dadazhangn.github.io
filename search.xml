@@ -106,6 +106,21 @@ w:Rock-y did-nt like that</div>
       </tags>
   </entry>
   <entry>
+    <title>优化jiba分词效率Demo</title>
+    <url>/2024/02/09/jieba/</url>
+    <content><![CDATA[<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> time</span><br><span class="line"><span class="keyword">import</span> jieba</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">split_words</span>(<span class="params">content_list, stopword_set</span>):</span><br><span class="line">    cut_words_list = []</span><br><span class="line">    start_time = time.time()</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> mail <span class="keyword">in</span> content_list:</span><br><span class="line">        <span class="comment"># 使用 jieba.lcut_for_search 替代 jieba.lcut</span></span><br><span class="line">        cut_words = jieba.lcut_for_search(mail)</span><br><span class="line">        <span class="comment"># 使用集合进行停用词检查</span></span><br><span class="line">        cut_words = [word <span class="keyword">for</span> word <span class="keyword">in</span> cut_words <span class="keyword">if</span> word <span class="keyword">not</span> <span class="keyword">in</span> stopword_set]</span><br><span class="line">        cut_words_list.append(cut_words)</span><br><span class="line"></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;jieba分词用时%.2f秒&#x27;</span> % (time.time() - start_time))</span><br><span class="line">    <span class="keyword">return</span> cut_words_list</span><br></pre></td></tr></table></figure>
+<h1 id="示例用法"><a href="#示例用法" class="headerlink" title="示例用法"></a>示例用法</h1><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">content_list = [<span class="string">&quot;邮件1的内容&quot;</span>, <span class="string">&quot;邮件2的内容&quot;</span>, <span class="string">&quot;邮件3的内容&quot;</span>]</span><br><span class="line">stopword_list = [<span class="string">&quot;停用词1&quot;</span>, <span class="string">&quot;停用词2&quot;</span>, <span class="string">&quot;停用词3&quot;</span>]</span><br><span class="line">stopword_set = <span class="built_in">set</span>(stopword_list)</span><br><span class="line"></span><br><span class="line">result = split_words(content_list, stopword_set)</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>教程</category>
+        <category>Jieba</category>
+      </categories>
+      <tags>
+        <tag>demo</tag>
+        <tag>Jieba</tag>
+        <tag>主题</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>出师表</title>
     <url>/2024/02/08/page/</url>
     <content><![CDATA[<p>臣亮言：<mark class="hl-label default">先帝</mark> 创业未半，而<mark class="hl-label blue">中道崩殂</mark> 。今天下三分，<mark class="hl-label pink">益州疲敝</mark> ，此诚<mark class="hl-label red">危急存亡之秋</mark> 也！然侍衞之臣，不懈于内；<mark class="hl-label purple">忠志之士</mark> ，忘身于外者，盖追先帝之殊遇，欲报之于陛下也。诚宜开张圣听，以光先帝遗德，恢弘志士之气；不宜妄自菲薄，引喻失义，以塞忠谏之路也。<br>宫中、府中，俱为一体；陟罚臧否，不宜异同。若有<mark class="hl-label orange">作奸</mark> 、<mark class="hl-label green">犯科</mark> ，及为忠善者，宜付有司，论其刑赏，以昭陛下平明之治；不宜偏私，使内外异法也。</p>
@@ -132,130 +147,6 @@ pie
       <tags>
         <tag>demo</tag>
         <tag>出师表</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>表情识别</title>
-    <url>/2024/04/20/emotion/</url>
-    <content><![CDATA[<h1 id="项目：人工智能-表情识别-DLBDSEAIS02"><a href="#项目：人工智能-表情识别-DLBDSEAIS02" class="headerlink" title="项目：人工智能-表情识别 (DLBDSEAIS02)"></a>项目：人工智能-表情识别 (DLBDSEAIS02)</h1><p>该项目利用 TensorFlow 作为主要框架，专注于使用卷积神经网络 (CNN) 从面部表情进行情绪检测。 TensorFlow 的部署功能（包括 TensorFlow Serving 和 TensorFlow Lite）可确保无缝过渡到生产。该工作流程涉及预处理管道，将 mma-facial-express 数据集的图像转换为 48x48 尺寸。 CNN 架构包括卷积层、最大池化、ReLU 激活、密集层和具有 Softmax 激活的全连接层。模型测试涉及准确率、召回率和精确率等指标，以及用于多分类的 F1“分数”。部署是通过 FastAPI 和 Docker 完成的，支持本地或基于云的执行。</p>
-<h2 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h2><p>为构建人工智能工具，利用图像中的面部表情来分析对广告的情绪反应。开发一个系统来对图像数据集中的情绪（例如快乐、愤怒、恐惧）进行分类。目标是通过面部表情识别至少三种情绪状态。</p>
-<h1 id="开发规划-UML-模式"><a href="#开发规划-UML-模式" class="headerlink" title="开发规划 - UML 模式"></a>开发规划 - UML 模式</h1><h2 id="统一建模语言图"><a href="#统一建模语言图" class="headerlink" title="统一建模语言图"></a>统一建模语言图</h2><p>图（概念阶段修订）- 卷积神经网络的设计，用于分类情绪并使用 API 提供服务<br><img src="https://s2.loli.net/2024/04/20/ciCzGqohpR1lEK9.jpg" alt="Design of Convolutional Neural Network to classify emotions and serve using API"></p>
-<p>创建的 Keras 序列模型是一个卷积神经网络 (CNN)，专为图像分类而设计，更具体地说，是对面部中存在的 7 种不同情绪进行分类。</p>
-<p>该架构从具有 32 个滤波器的卷积层 (Conv2D_1) 开始，然后是批量归一化。随后，Conv2D_2 采用 64 个滤波器，具有 ReLU 激活和“相同”填充，并伴有批量归一化。 MaxPooling2D_1减少空间维度，Dropout_1防止过拟合。该模型还包括额外的几对卷积层和批量归一化层（Conv2D_3、BatchNormalization_3、Conv2D_4、BatchNormalization_4），每个层后面都有 MaxPooling 和 Dropout。该模式继续为 Conv2D_5、BatchNormalization_5、Conv2D_6、BatchNormalization_6、MaxPooling2D_3 和 Dropout_3。 Flattening 层为 Dense 层准备数据，从 Dense_1（2048 个单元，ReLU 激活）和 BatchNormalization_7 开始，然后是 Dropout_4。最终的 Dense_2 层利用 softmax 激活函数生成 7 个类别的输出概率。</p>
-<p>该架构结合了卷积层和全连接层，通过批量归一化和 dropout 进行增强，以增强泛化并防止过度拟合。</p>
-<h2 id="数据集概述"><a href="#数据集概述" class="headerlink" title="数据集概述"></a>数据集概述</h2><p>提供的图像数据集名为 MMAFEDB，分为三个主要文件夹：test、train 和 valid。每个文件夹都包含七种不同情绪的子文件夹：愤怒、厌恶、恐惧、快乐、中性、悲伤和惊讶。数据集统计显示，测试集包含 17,356 张图像，其中 13,767 张灰度图像，3,589 张 RGB 图像。训练集由 92,968 张图像组成，其中 64,259 张灰度图像，28,709 张 RGB 图像。验证集包含 17,356 张图像，其中 13,767 张灰度图像和 3,589 张 RGB 图像。数据集源自 Kaggle ( <a href="https://www.kaggle.com/datasets/mahmoudima/mma-facial-expression">https://www.kaggle.com/datasets/mahmoudima/mma-facial-expression</a> )。各组情绪的分布各不相同，其中中性情绪是最普遍的情绪。还可以在 1_dataset_exploration.ipynb 笔记本中找到以下结果，其中收集了有关数据集的见解，并且还对低于特定大小阈值的低质量图像进行了简要清理。</p>
-<p>训练文件夹：</p>
-<ul>
-<li>中性：29,384 张图像</li>
-<li>愤怒：6,566 张图片</li>
-<li>恐惧：4,859 张图片</li>
-<li>快乐：28,592 张图片</li>
-<li>厌恶：3,231 张图片</li>
-<li>悲伤：12,223 张图片</li>
-<li>惊喜：8,113 张图片</li>
-</ul>
-<p>测试文件夹：</p>
-<ul>
-<li>中性：5,858 张图像</li>
-<li>愤怒：1,041 张图片</li>
-<li>恐惧：691 张图片</li>
-<li>快乐：5,459 张图片</li>
-<li>厌恶：655 张图片</li>
-<li>悲伤：2,177 张图片</li>
-<li>惊喜：1,475 张图片</li>
-</ul>
-<p>验证文件夹:</p>
-<ul>
-<li>中性：5,839 张图片</li>
-<li>愤怒：1,017 张图片</li>
-<li>恐惧：659 张图片</li>
-<li>快乐：5,475 张图片</li>
-<li>厌恶：656 张图片</li>
-<li>悲伤：2,236 张图片</li>
-<li>惊喜：1,474 张图片</li>
-</ul>
-<p>此细分提供了 MMAFEDB 数据集中每个文件夹的不同情绪图像分布的详细视图。</p>
-<h1 id="模型开发"><a href="#模型开发" class="headerlink" title="模型开发"></a>模型开发</h1><h2 id="模型训练"><a href="#模型训练" class="headerlink" title="模型训练"></a>模型训练</h2><p>在 2_model_training_iterative.ipynb 中，使用清理后的数据集（不平衡情绪）训练四个不同的 Keras Sequential 模型。这些模型分别命名为 model_1_concept、model_2_best、model_3_best_nodropout 和 model_4_best_nodropout_nobatchn，是根据卷积神经网络 (CNN) 的初始概念和文献建议通过实验和调整而开发的。</p>
-<p>该代码首先导入必要的模块，并为训练集和测试集创建 ImageDataGenerators 和 flow_from_directory 函数。模型架构在 JSON 文件中指定，代码读取这些文件以迭代构建每个 Keras 模型。这样可以轻松迭代不同的模型，并手动调整优化器和颜色模式（RGB 或灰度）。每个模型的训练历史记录都会被保存，从而实现性能和学习的跟踪和可视化。此外，模型架构保存在“diagram”文件夹中，检查点文件保存在改进的epoch上，最终模型保存为h5文件。</p>
-<p>保存的文件格式的示例包括 <code>modelname</code> <em> <code>optimizer</code> </em> <code>colormode</code> <em> <code>batchsize</code> </em> <code>balanced vs standard</code> _ <code>history, final or cpt</code> . <code>filename_ext</code>:</p>
-<ul>
-<li>历史记录：model_1_concept_adam_grayscale_32_augment_history.json</li>
-<li>最终模型：model_2_best_rmsprop_rgb_512_augment_final.h5</li>
-<li>检查点：model_3_best_nodropout_rmsprop_rgb_512_augment_cpt.h5</li>
-</ul>
-<p>出于实用性的考虑，仅将性能最佳的模型保存在专用的“models/best_model”文件夹中，包括架构（JSON 文件）和权重（h5 文件）。</p>
-<h2 id="模型指标和超参数"><a href="#模型指标和超参数" class="headerlink" title="模型指标和超参数"></a>模型指标和超参数</h2><p>在 3_training_evaluation.ipynb 中，对在清理后的数据集上训练的情绪识别模型进行了深入评估。分析首先导入模块并定义一个函数来识别每个模型的训练历史记录中的最高指标，例如准确度、损失、val_accuracy 和 val_loss。选择具有最高 val_accuracy 的模型（标识为“model_2_best_sgd_rgb_128”）进行进一步审查。实现了排名函数，创建一个根据 val_accuracy 对模型进行排名的数组。打印了前 10 个最佳模型和 5 个最差模型，提供了模型相对性能的快速概览。</p>
-<p>随后，函数使用各种优化器和批量大小绘制不同的模型，比较 RGB 和灰度颜色模式的结果。此探索旨在考虑数据集的主要灰度图像，辨别使用任一颜色模式的任何明显效果。</p>
-<p>为了详细了解最佳模型的性能，使用模型训练历史记录创建数据帧，捕获跨时期的指标（准确性、损失、val_accuracy、val_loss）。直方图说明了性能指标的分布，强调了最高的累积箱。 val_accuracy 与 epoch 的热图提供了有关模型学习速度的见解，颜色越亮表示学习速度越快。</p>
-<p>此外，利用数据帧来查找按模型分组的最大值和最小值，从而提供训练历史记录的详细快照。最大值按 val_accuracy 降序排列，显示在数据框中。在所有模型中，确定了最低和最高值，从而提供对整体性能范围的深入了解。此外，还计算并可视化平均值、中位数和箱线图，以提供度量分布的概述。</p>
-<p>然后，分析将重点转移到性能最佳的模型上，探究其训练和验证的准确性、损失和混淆矩阵。混淆矩阵突出了对角线上的正确预测，并暴露了预测某些情绪的挑战。分类报告提供详细的指标，揭示每个情感标签的 f1 分数、精确度、召回率和支持度。</p>
-<p>接下来是微观和宏观平均 ROC 曲线分析，说明真阳性率和假阳性率与相应 AUC 值之间的权衡。最后，使用 batch_size = 1 的测试集对最佳模型进行评估，从而深入了解训练和验证的准确性。这种多方面的评估提供了对经过训练的情绪识别模型的全面理解，揭示了它们的优势、挑战和整体性能特征。</p>
-<p><img src="https://s2.loli.net/2024/04/20/5IefN4L6FDp9UHB.png" alt="Model 1 Image"></p>
-<p>迭代训练 4 个不同模型的结果在 /models 中:</p>
-<ul>
-<li><strong>model_1_concept</strong> - 概念阶段最初描述的模型</li>
-<li><strong>model_2_best</strong> - 在尝试不同架构时发现的模型</li>
-<li><strong>model_3_best_nodropout</strong> - 丢弃 model_2 中 dropout 的结果</li>
-<li><strong>model_4_best_nodroupout_nobatchn</strong> - 从 model_2 中丢弃 dropout 和批量归一化的结果</li>
-</ul>
-<p>使用三个通道（RGB）进行图像输入，得到以下结果：<br><img src="https://s2.loli.net/2024/04/20/WsOkwRQz3YAPciU.jpg" alt="RGB Model Training Results"></p>
-<p>使用一个通道（灰度）进行图像输入，得到以下结果：<br><img src="https://s2.loli.net/2024/04/20/mvp3s715AJubOBD.jpg" alt="GRAYSCALE Model Training Results"></p>
-<p>可以看出，尽管大部分训练数据是灰度图像，但 RGB 训练结果稍好一些。该模型似乎从 RGB 数据中学习了仅通过一个通道无法获得的方面。</p>
-<h2 id="平衡数据集"><a href="#平衡数据集" class="headerlink" title="平衡数据集"></a>平衡数据集</h2><p>我们尝试使用均衡数量的情感图像，以便每个类别都有相同的数量。从原始数据集中可以清楚地看出，某些情绪包含许多图像，而另一些情绪只占很小的比例。因此，我们探索了两种不同的平衡尝试，以了解增强的影响。首先，使用10.000 个图像的低阈值，以便图像数量较少的文件夹最终不会出现其原始图像的许多倍。最初，它被认为是更好的选择，因为太多的增强来达到其他类别的原始计数预计会产生不太好的结果。然而，平衡 2 数据集（所有图像类别都经过增强，每种情感达到30,000 张图像）表现更好。即使包含很少图像的情感，它仍然表现得更好。</p>
-<p>可以在找到<code>4_balanced_emotions.ipynb</code> 和 <code>5_balanced_emotions_2.ipynb</code>. 首先，旧的增强被清理以返回到原始数据集。然后，对于未达到所需量的每种情绪，执行增强，然后文件夹达到所需量，例如 10,000 个图像。接下来，修剪超出所需数量的文件夹（首先删除尺寸最小的图像），以便在训练开始时所有文件夹都具有相同数量的图像。</p>
-<p>这两幅图说明了增强是如何进行的。</p>
-<p><strong>Balanced-1数据集 (每类 10.000 个图像)</strong><br><img src="https://s2.loli.net/2024/04/20/hC53aDe9TqJmozs.png" alt="Balanced-1 Dataset"><br><strong>Balanced-1 数据集(每类 30.000 个图像) - - 未更改，因为全部满足 30.000 个要求。</strong><br><img src="https://smms.app/image/xXD8VHOMy2uw1rc" alt="Balanced-2 Dataset"></p>
-<p>模型经过训练，评估数据包含如下。</p>
-<h2 id="最佳的表现模型"><a href="#最佳的表现模型" class="headerlink" title="最佳的表现模型"></a>最佳的表现模型</h2><p>根据最终的最大训练验证精度（val_accuracy）选择最佳模型。</p>
-<p><strong>验证顶部和底部 5 个模型的准确性</strong><br><img src="https://s2.loli.net/2024/04/20/mTraQiGABK4klJp.png" alt="best_worst_models_val_accuracy"></p>
-<p><strong>用于测试和验证的最高准确度和最低损失的箱线图</strong><br><img src="https://s2.loli.net/2024/04/20/eH472zFMPuURoaW.png" alt="boxenplot_highest_acc_lowest_loss"></p>
-<p><strong>显示准确度的直方图分布，并突出显示最高条形（平均值）</strong><br><img src="https://s2.loli.net/2024/04/20/QoRkdDCEa3xJnmS.png" alt="histplot_val_accuracy_train_validate"></p>
-<ul>
-<li>al_accuracy最高的模型文件为:  <strong>../models/training/history/model_2_best_sgd_rgb_128_augment_history.json</strong></li>
-<li>所有模型最大达到 val_accuracy 的平均值为: <strong>0.5652485278745493</strong></li>
-<li>最高的val_accuracy（model_2_best_sgd_rgb_128）是: <strong>0.5928241014480591</strong></li>
-</ul>
-<p><strong>不平衡数据集的训练历史</strong><br><img src="https://s2.loli.net/2024/04/20/4Lx5BdVgzownPcW.png" alt="metrics model_2_best_sgd_rgb_128"><br>最佳模型的性能比平均 val_accuracy 训练验证好约 2.8%。</p>
-<p>然而，如果我们在评估时使用批量大小 1，我们会发现最好的模型表现更好。<br>     评估模型的最终结果(batchsize = 1):<br>     训练准确度 = 83.28%<br>     验证准确度 = 63.52%</p>
-<p><strong>Balanced-1 数据集的训练历史</strong><br><img src="https://s2.loli.net/2024/04/20/biVfj6sD2kBOKuJ.png" alt="metrics model_2_best_sgd_rgb_128 balanced"></p>
-<p><strong>Balanced-2 数据集的训练历史</strong><br><img src="https://s2.loli.net/2024/04/20/4evM96YsPZlotBT.png" alt="metrics model_2_best_sgd_rgb_128 balanced 2"></p>
-<h2 id="分类图"><a href="#分类图" class="headerlink" title="分类图"></a>分类图</h2><ul>
-<li>A -  最佳模型不平衡</li>
-<li>B - 最佳模型 Balanced-1 数据集</li>
-<li>C - 最佳模型 Balanced-2 数据集</li>
-</ul>
-<h3 id="ROC曲线"><a href="#ROC曲线" class="headerlink" title="ROC曲线"></a>ROC曲线</h3><p><img src="https://s2.loli.net/2024/04/20/OBAdhZg3zPLKEHc.png" alt="ROC Curve for the best model unbalanced &amp; balanced emotions"></p>
-<h3 id="混淆矩阵"><a href="#混淆矩阵" class="headerlink" title="混淆矩阵"></a>混淆矩阵</h3><p><img src="https://s2.loli.net/2024/04/20/rDj8kAc23nehPRS.png" alt="Confusion Matrixes for the best model unbalanced &amp; balanced emotions"></p>
-<h3 id="分类报告"><a href="#分类报告" class="headerlink" title="分类报告"></a>分类报告</h3><p><img src="https://s2.loli.net/2024/04/20/hJ5VzDqln7wCNc1.png" alt="Classification Report for the best model unbalanced &amp; balanced emotions"></p>
-<h1 id="Docker-API-前端"><a href="#Docker-API-前端" class="headerlink" title="Docker API 前端"></a>Docker API 前端</h1><h3 id="参阅-docker-api中的更多信息"><a href="#参阅-docker-api中的更多信息" class="headerlink" title="参阅 docker-api中的更多信息"></a>参阅 docker-api中的更多信息</h3><p>重新训练的模型使用 Balanced-2 数据集的情感图像进行预测。</p>
-<ul>
-<li>用户从他们的设备中选择一个文件</li>
-<li>用户点击预测</li>
-<li>显示预测情绪和类别概率。<br><img src="https://s2.loli.net/2024/04/20/cGKxsQ8ieOv3NUD.png" alt="docker-api front-end"></li>
-</ul>
-<h1 id="开始"><a href="#开始" class="headerlink" title="开始"></a>开始</h1><h2 id="使用-Jupyter-Notebook-的依赖项-注意，如果不存在-CUDA-GPU，它将默认使用-CPU（速度慢）"><a href="#使用-Jupyter-Notebook-的依赖项-注意，如果不存在-CUDA-GPU，它将默认使用-CPU（速度慢）" class="headerlink" title="使用 Jupyter Notebook 的依赖项 - 注意，如果不存在 CUDA GPU，它将默认使用 CPU（速度慢）"></a>使用 Jupyter Notebook 的依赖项 - 注意，如果不存在 CUDA GPU，它将默认使用 CPU（速度慢）</h2><p>创建一个新的虚拟 python 环境。</p>
-<p><code>python3 -m venv venv</code></p>
-<p>激活环境</p>
-<p><code>source venv/bin/activate</code></p>
-<p>安装依赖项</p>
-<p><code>pip3 install -r requirements.txt</code></p>
-<h2 id="使用预构建-docker-镜像的-API-使用"><a href="#使用预构建-docker-镜像的-API-使用" class="headerlink" title="使用预构建 docker 镜像的 API 使用"></a>使用预构建 docker 镜像的 API 使用</h2><h3 id="拉取最新的构建镜像"><a href="#拉取最新的构建镜像" class="headerlink" title="拉取最新的构建镜像"></a>拉取最新的构建镜像</h3><p><code>docker pull deusnexus/emotion_classification:latest</code></p>
-<h3 id="运行容器"><a href="#运行容器" class="headerlink" title="运行容器"></a>运行容器</h3><p><code>docker run --name emotion_prediction_container -p 8000:8000 emotion_prediction_fastapi:latest</code></p>
-<h3 id="在本地主机上打开-API"><a href="#在本地主机上打开-API" class="headerlink" title="在本地主机上打开 API"></a>在本地主机上打开 API</h3><p><code>http://127.0.0.1:8000</code></p>
-<h1 id="Reflection"><a href="#Reflection" class="headerlink" title="Reflection"></a>Reflection</h1><p>最初，使用 CUDA 驱动程序很麻烦，而且要反复试验才能让我的 NVIDIA GPU 正常工作，这是我面临的最大挑战。在使用卷积神经网络开发情感分析的过程中，我了解了模型架构（卷积层/最大池/dropout/批量归一化）、优化器和损失函数。</p>
-<p>此外，如何使用不同的指标来衡量模型性能，以捕获训练历史并评估所使用的所有不同参数的影响。我的目标是创建一个以清晰且针对特定目的的方式组织的项目结构，并将权重和捕获的模型指标保存在指定的文件夹和文件中。通过这个过程，我更好地了解了如何以迭代方式保存和训练模型，以及如何在后期训练中恢复模型并与架构或仅训练的权重一起保存，以及如何使用这些文件。</p>
-<p>我们发现，以 RGB 颜色训练时，包含大部分灰度图像和次要部分 RGB 图像的图像数据集似乎仍然表现更好。通过阅读不同的文献和在线材料，我了解了 dropout 和批量归一化如何显着提高泛化能力和性能。</p>
-<p>使用不同的可视化对我训练的模型进行评估；例如，混淆矩阵、分类报告（f1 分数、召回率、精确度、准确度）让我很好地了解了模型的表现、意味着什么并确定了潜在的改进领域。通过图像增强平衡数据集让我学会了如何平衡图像类，但是它并没有显着改善我的不平衡数据集，这肯定是我在未来项目中更多探索和优化的领域。</p>
-<p>最后，使用 FastAPI 和 Docker 构建一个简单的 api， 让我从用户的角度思考，调用 API 或使用前端网站与我训练的模型进行交互。</p>
-<h1 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h1><p>该项目基于评估整个测试集，使用不平衡模型对情感图像进行了平均 63.52% 的分类。(<a href="https://www.kaggle.com/datasets/mahmoudima/mma-facial-expression/code">https://www.kaggle.com/datasets/mahmoudima/mma-facial-expression/code</a>). </p>
-]]></content>
-      <categories>
-        <category>学习</category>
-        <category>Python</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-        <tag>Tensorflow</tag>
       </tags>
   </entry>
   <entry>
@@ -1026,18 +917,127 @@ pie
       </tags>
   </entry>
   <entry>
-    <title>优化jiba分词效率Demo</title>
-    <url>/2024/02/09/jieba/</url>
-    <content><![CDATA[<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> time</span><br><span class="line"><span class="keyword">import</span> jieba</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">split_words</span>(<span class="params">content_list, stopword_set</span>):</span><br><span class="line">    cut_words_list = []</span><br><span class="line">    start_time = time.time()</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> mail <span class="keyword">in</span> content_list:</span><br><span class="line">        <span class="comment"># 使用 jieba.lcut_for_search 替代 jieba.lcut</span></span><br><span class="line">        cut_words = jieba.lcut_for_search(mail)</span><br><span class="line">        <span class="comment"># 使用集合进行停用词检查</span></span><br><span class="line">        cut_words = [word <span class="keyword">for</span> word <span class="keyword">in</span> cut_words <span class="keyword">if</span> word <span class="keyword">not</span> <span class="keyword">in</span> stopword_set]</span><br><span class="line">        cut_words_list.append(cut_words)</span><br><span class="line"></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;jieba分词用时%.2f秒&#x27;</span> % (time.time() - start_time))</span><br><span class="line">    <span class="keyword">return</span> cut_words_list</span><br></pre></td></tr></table></figure>
-<h1 id="示例用法"><a href="#示例用法" class="headerlink" title="示例用法"></a>示例用法</h1><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">content_list = [<span class="string">&quot;邮件1的内容&quot;</span>, <span class="string">&quot;邮件2的内容&quot;</span>, <span class="string">&quot;邮件3的内容&quot;</span>]</span><br><span class="line">stopword_list = [<span class="string">&quot;停用词1&quot;</span>, <span class="string">&quot;停用词2&quot;</span>, <span class="string">&quot;停用词3&quot;</span>]</span><br><span class="line">stopword_set = <span class="built_in">set</span>(stopword_list)</span><br><span class="line"></span><br><span class="line">result = split_words(content_list, stopword_set)</span><br></pre></td></tr></table></figure>]]></content>
+    <title>表情识别</title>
+    <url>/2024/04/20/emotion/</url>
+    <content><![CDATA[<h1 id="项目：人工智能-表情识别-DLBDSEAIS02"><a href="#项目：人工智能-表情识别-DLBDSEAIS02" class="headerlink" title="项目：人工智能-表情识别 (DLBDSEAIS02)"></a>项目：人工智能-表情识别 (DLBDSEAIS02)</h1><p>该项目利用 TensorFlow 作为主要框架，专注于使用卷积神经网络 (CNN) 从面部表情进行情绪检测。 TensorFlow 的部署功能（包括 TensorFlow Serving 和 TensorFlow Lite）可确保无缝过渡到生产。该工作流程涉及预处理管道，将 mma-facial-express 数据集的图像转换为 48x48 尺寸。 CNN 架构包括卷积层、最大池化、ReLU 激活、密集层和具有 Softmax 激活的全连接层。模型测试涉及准确率、召回率和精确率等指标，以及用于多分类的 F1“分数”。部署是通过 FastAPI 和 Docker 完成的，支持本地或基于云的执行。</p>
+<h2 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h2><p>为构建人工智能工具，利用图像中的面部表情来分析对广告的情绪反应。开发一个系统来对图像数据集中的情绪（例如快乐、愤怒、恐惧）进行分类。目标是通过面部表情识别至少三种情绪状态。</p>
+<h1 id="开发规划-UML-模式"><a href="#开发规划-UML-模式" class="headerlink" title="开发规划 - UML 模式"></a>开发规划 - UML 模式</h1><h2 id="统一建模语言图"><a href="#统一建模语言图" class="headerlink" title="统一建模语言图"></a>统一建模语言图</h2><p>图（概念阶段修订）- 卷积神经网络的设计，用于分类情绪并使用 API 提供服务<br><img src="https://s2.loli.net/2024/04/20/ciCzGqohpR1lEK9.jpg" alt="Design of Convolutional Neural Network to classify emotions and serve using API"></p>
+<p>创建的 Keras 序列模型是一个卷积神经网络 (CNN)，专为图像分类而设计，更具体地说，是对面部中存在的 7 种不同情绪进行分类。</p>
+<p>该架构从具有 32 个滤波器的卷积层 (Conv2D_1) 开始，然后是批量归一化。随后，Conv2D_2 采用 64 个滤波器，具有 ReLU 激活和“相同”填充，并伴有批量归一化。 MaxPooling2D_1减少空间维度，Dropout_1防止过拟合。该模型还包括额外的几对卷积层和批量归一化层（Conv2D_3、BatchNormalization_3、Conv2D_4、BatchNormalization_4），每个层后面都有 MaxPooling 和 Dropout。该模式继续为 Conv2D_5、BatchNormalization_5、Conv2D_6、BatchNormalization_6、MaxPooling2D_3 和 Dropout_3。 Flattening 层为 Dense 层准备数据，从 Dense_1（2048 个单元，ReLU 激活）和 BatchNormalization_7 开始，然后是 Dropout_4。最终的 Dense_2 层利用 softmax 激活函数生成 7 个类别的输出概率。</p>
+<p>该架构结合了卷积层和全连接层，通过批量归一化和 dropout 进行增强，以增强泛化并防止过度拟合。</p>
+<h2 id="数据集概述"><a href="#数据集概述" class="headerlink" title="数据集概述"></a>数据集概述</h2><p>提供的图像数据集名为 MMAFEDB，分为三个主要文件夹：test、train 和 valid。每个文件夹都包含七种不同情绪的子文件夹：愤怒、厌恶、恐惧、快乐、中性、悲伤和惊讶。数据集统计显示，测试集包含 17,356 张图像，其中 13,767 张灰度图像，3,589 张 RGB 图像。训练集由 92,968 张图像组成，其中 64,259 张灰度图像，28,709 张 RGB 图像。验证集包含 17,356 张图像，其中 13,767 张灰度图像和 3,589 张 RGB 图像。数据集源自 Kaggle ( <a href="https://www.kaggle.com/datasets/mahmoudima/mma-facial-expression">https://www.kaggle.com/datasets/mahmoudima/mma-facial-expression</a> )。各组情绪的分布各不相同，其中中性情绪是最普遍的情绪。还可以在 1_dataset_exploration.ipynb 笔记本中找到以下结果，其中收集了有关数据集的见解，并且还对低于特定大小阈值的低质量图像进行了简要清理。</p>
+<p>训练文件夹：</p>
+<ul>
+<li>中性：29,384 张图像</li>
+<li>愤怒：6,566 张图片</li>
+<li>恐惧：4,859 张图片</li>
+<li>快乐：28,592 张图片</li>
+<li>厌恶：3,231 张图片</li>
+<li>悲伤：12,223 张图片</li>
+<li>惊喜：8,113 张图片</li>
+</ul>
+<p>测试文件夹：</p>
+<ul>
+<li>中性：5,858 张图像</li>
+<li>愤怒：1,041 张图片</li>
+<li>恐惧：691 张图片</li>
+<li>快乐：5,459 张图片</li>
+<li>厌恶：655 张图片</li>
+<li>悲伤：2,177 张图片</li>
+<li>惊喜：1,475 张图片</li>
+</ul>
+<p>验证文件夹:</p>
+<ul>
+<li>中性：5,839 张图片</li>
+<li>愤怒：1,017 张图片</li>
+<li>恐惧：659 张图片</li>
+<li>快乐：5,475 张图片</li>
+<li>厌恶：656 张图片</li>
+<li>悲伤：2,236 张图片</li>
+<li>惊喜：1,474 张图片</li>
+</ul>
+<p>此细分提供了 MMAFEDB 数据集中每个文件夹的不同情绪图像分布的详细视图。</p>
+<h1 id="模型开发"><a href="#模型开发" class="headerlink" title="模型开发"></a>模型开发</h1><h2 id="模型训练"><a href="#模型训练" class="headerlink" title="模型训练"></a>模型训练</h2><p>在 2_model_training_iterative.ipynb 中，使用清理后的数据集（不平衡情绪）训练四个不同的 Keras Sequential 模型。这些模型分别命名为 model_1_concept、model_2_best、model_3_best_nodropout 和 model_4_best_nodropout_nobatchn，是根据卷积神经网络 (CNN) 的初始概念和文献建议通过实验和调整而开发的。</p>
+<p>该代码首先导入必要的模块，并为训练集和测试集创建 ImageDataGenerators 和 flow_from_directory 函数。模型架构在 JSON 文件中指定，代码读取这些文件以迭代构建每个 Keras 模型。这样可以轻松迭代不同的模型，并手动调整优化器和颜色模式（RGB 或灰度）。每个模型的训练历史记录都会被保存，从而实现性能和学习的跟踪和可视化。此外，模型架构保存在“diagram”文件夹中，检查点文件保存在改进的epoch上，最终模型保存为h5文件。</p>
+<p>保存的文件格式的示例包括 <code>modelname</code> <em> <code>optimizer</code> </em> <code>colormode</code> <em> <code>batchsize</code> </em> <code>balanced vs standard</code> _ <code>history, final or cpt</code> . <code>filename_ext</code>:</p>
+<ul>
+<li>历史记录：model_1_concept_adam_grayscale_32_augment_history.json</li>
+<li>最终模型：model_2_best_rmsprop_rgb_512_augment_final.h5</li>
+<li>检查点：model_3_best_nodropout_rmsprop_rgb_512_augment_cpt.h5</li>
+</ul>
+<p>出于实用性的考虑，仅将性能最佳的模型保存在专用的“models/best_model”文件夹中，包括架构（JSON 文件）和权重（h5 文件）。</p>
+<h2 id="模型指标和超参数"><a href="#模型指标和超参数" class="headerlink" title="模型指标和超参数"></a>模型指标和超参数</h2><p>在 3_training_evaluation.ipynb 中，对在清理后的数据集上训练的情绪识别模型进行了深入评估。分析首先导入模块并定义一个函数来识别每个模型的训练历史记录中的最高指标，例如准确度、损失、val_accuracy 和 val_loss。选择具有最高 val_accuracy 的模型（标识为“model_2_best_sgd_rgb_128”）进行进一步审查。实现了排名函数，创建一个根据 val_accuracy 对模型进行排名的数组。打印了前 10 个最佳模型和 5 个最差模型，提供了模型相对性能的快速概览。</p>
+<p>随后，函数使用各种优化器和批量大小绘制不同的模型，比较 RGB 和灰度颜色模式的结果。此探索旨在考虑数据集的主要灰度图像，辨别使用任一颜色模式的任何明显效果。</p>
+<p>为了详细了解最佳模型的性能，使用模型训练历史记录创建数据帧，捕获跨时期的指标（准确性、损失、val_accuracy、val_loss）。直方图说明了性能指标的分布，强调了最高的累积箱。 val_accuracy 与 epoch 的热图提供了有关模型学习速度的见解，颜色越亮表示学习速度越快。</p>
+<p>此外，利用数据帧来查找按模型分组的最大值和最小值，从而提供训练历史记录的详细快照。最大值按 val_accuracy 降序排列，显示在数据框中。在所有模型中，确定了最低和最高值，从而提供对整体性能范围的深入了解。此外，还计算并可视化平均值、中位数和箱线图，以提供度量分布的概述。</p>
+<p>然后，分析将重点转移到性能最佳的模型上，探究其训练和验证的准确性、损失和混淆矩阵。混淆矩阵突出了对角线上的正确预测，并暴露了预测某些情绪的挑战。分类报告提供详细的指标，揭示每个情感标签的 f1 分数、精确度、召回率和支持度。</p>
+<p>接下来是微观和宏观平均 ROC 曲线分析，说明真阳性率和假阳性率与相应 AUC 值之间的权衡。最后，使用 batch_size = 1 的测试集对最佳模型进行评估，从而深入了解训练和验证的准确性。这种多方面的评估提供了对经过训练的情绪识别模型的全面理解，揭示了它们的优势、挑战和整体性能特征。</p>
+<p><img src="https://s2.loli.net/2024/04/20/5IefN4L6FDp9UHB.png" alt="Model 1 Image"></p>
+<p>迭代训练 4 个不同模型的结果在 /models 中:</p>
+<ul>
+<li><strong>model_1_concept</strong> - 概念阶段最初描述的模型</li>
+<li><strong>model_2_best</strong> - 在尝试不同架构时发现的模型</li>
+<li><strong>model_3_best_nodropout</strong> - 丢弃 model_2 中 dropout 的结果</li>
+<li><strong>model_4_best_nodroupout_nobatchn</strong> - 从 model_2 中丢弃 dropout 和批量归一化的结果</li>
+</ul>
+<p>使用三个通道（RGB）进行图像输入，得到以下结果：<br><img src="https://s2.loli.net/2024/04/20/WsOkwRQz3YAPciU.jpg" alt="RGB Model Training Results"></p>
+<p>使用一个通道（灰度）进行图像输入，得到以下结果：<br><img src="https://s2.loli.net/2024/04/20/mvp3s715AJubOBD.jpg" alt="GRAYSCALE Model Training Results"></p>
+<p>可以看出，尽管大部分训练数据是灰度图像，但 RGB 训练结果稍好一些。该模型似乎从 RGB 数据中学习了仅通过一个通道无法获得的方面。</p>
+<h2 id="平衡数据集"><a href="#平衡数据集" class="headerlink" title="平衡数据集"></a>平衡数据集</h2><p>我们尝试使用均衡数量的情感图像，以便每个类别都有相同的数量。从原始数据集中可以清楚地看出，某些情绪包含许多图像，而另一些情绪只占很小的比例。因此，我们探索了两种不同的平衡尝试，以了解增强的影响。首先，使用10.000 个图像的低阈值，以便图像数量较少的文件夹最终不会出现其原始图像的许多倍。最初，它被认为是更好的选择，因为太多的增强来达到其他类别的原始计数预计会产生不太好的结果。然而，平衡 2 数据集（所有图像类别都经过增强，每种情感达到30,000 张图像）表现更好。即使包含很少图像的情感，它仍然表现得更好。</p>
+<p>可以在找到<code>4_balanced_emotions.ipynb</code> 和 <code>5_balanced_emotions_2.ipynb</code>. 首先，旧的增强被清理以返回到原始数据集。然后，对于未达到所需量的每种情绪，执行增强，然后文件夹达到所需量，例如 10,000 个图像。接下来，修剪超出所需数量的文件夹（首先删除尺寸最小的图像），以便在训练开始时所有文件夹都具有相同数量的图像。</p>
+<p>这两幅图说明了增强是如何进行的。</p>
+<p><strong>Balanced-1数据集 (每类 10.000 个图像)</strong><br><img src="https://s2.loli.net/2024/04/20/hC53aDe9TqJmozs.png" alt="Balanced-1 Dataset"><br><strong>Balanced-1 数据集(每类 30.000 个图像) - - 未更改，因为全部满足 30.000 个要求。</strong><br><img src="https://smms.app/image/xXD8VHOMy2uw1rc" alt="Balanced-2 Dataset"></p>
+<p>模型经过训练，评估数据包含如下。</p>
+<h2 id="最佳的表现模型"><a href="#最佳的表现模型" class="headerlink" title="最佳的表现模型"></a>最佳的表现模型</h2><p>根据最终的最大训练验证精度（val_accuracy）选择最佳模型。</p>
+<p><strong>验证顶部和底部 5 个模型的准确性</strong><br><img src="https://s2.loli.net/2024/04/20/mTraQiGABK4klJp.png" alt="best_worst_models_val_accuracy"></p>
+<p><strong>用于测试和验证的最高准确度和最低损失的箱线图</strong><br><img src="https://s2.loli.net/2024/04/20/eH472zFMPuURoaW.png" alt="boxenplot_highest_acc_lowest_loss"></p>
+<p><strong>显示准确度的直方图分布，并突出显示最高条形（平均值）</strong><br><img src="https://s2.loli.net/2024/04/20/QoRkdDCEa3xJnmS.png" alt="histplot_val_accuracy_train_validate"></p>
+<ul>
+<li>al_accuracy最高的模型文件为:  <strong>../models/training/history/model_2_best_sgd_rgb_128_augment_history.json</strong></li>
+<li>所有模型最大达到 val_accuracy 的平均值为: <strong>0.5652485278745493</strong></li>
+<li>最高的val_accuracy（model_2_best_sgd_rgb_128）是: <strong>0.5928241014480591</strong></li>
+</ul>
+<p><strong>不平衡数据集的训练历史</strong><br><img src="https://s2.loli.net/2024/04/20/4Lx5BdVgzownPcW.png" alt="metrics model_2_best_sgd_rgb_128"><br>最佳模型的性能比平均 val_accuracy 训练验证好约 2.8%。</p>
+<p>然而，如果我们在评估时使用批量大小 1，我们会发现最好的模型表现更好。<br>     评估模型的最终结果(batchsize = 1):<br>     训练准确度 = 83.28%<br>     验证准确度 = 63.52%</p>
+<p><strong>Balanced-1 数据集的训练历史</strong><br><img src="https://s2.loli.net/2024/04/20/biVfj6sD2kBOKuJ.png" alt="metrics model_2_best_sgd_rgb_128 balanced"></p>
+<p><strong>Balanced-2 数据集的训练历史</strong><br><img src="https://s2.loli.net/2024/04/20/4evM96YsPZlotBT.png" alt="metrics model_2_best_sgd_rgb_128 balanced 2"></p>
+<h2 id="分类图"><a href="#分类图" class="headerlink" title="分类图"></a>分类图</h2><ul>
+<li>A -  最佳模型不平衡</li>
+<li>B - 最佳模型 Balanced-1 数据集</li>
+<li>C - 最佳模型 Balanced-2 数据集</li>
+</ul>
+<h3 id="ROC曲线"><a href="#ROC曲线" class="headerlink" title="ROC曲线"></a>ROC曲线</h3><p><img src="https://s2.loli.net/2024/04/20/OBAdhZg3zPLKEHc.png" alt="ROC Curve for the best model unbalanced &amp; balanced emotions"></p>
+<h3 id="混淆矩阵"><a href="#混淆矩阵" class="headerlink" title="混淆矩阵"></a>混淆矩阵</h3><p><img src="https://s2.loli.net/2024/04/20/rDj8kAc23nehPRS.png" alt="Confusion Matrixes for the best model unbalanced &amp; balanced emotions"></p>
+<h3 id="分类报告"><a href="#分类报告" class="headerlink" title="分类报告"></a>分类报告</h3><p><img src="https://s2.loli.net/2024/04/20/hJ5VzDqln7wCNc1.png" alt="Classification Report for the best model unbalanced &amp; balanced emotions"></p>
+<h1 id="Docker-API-前端"><a href="#Docker-API-前端" class="headerlink" title="Docker API 前端"></a>Docker API 前端</h1><h3 id="参阅-docker-api中的更多信息"><a href="#参阅-docker-api中的更多信息" class="headerlink" title="参阅 docker-api中的更多信息"></a>参阅 docker-api中的更多信息</h3><p>重新训练的模型使用 Balanced-2 数据集的情感图像进行预测。</p>
+<ul>
+<li>用户从他们的设备中选择一个文件</li>
+<li>用户点击预测</li>
+<li>显示预测情绪和类别概率。<br><img src="https://s2.loli.net/2024/04/20/cGKxsQ8ieOv3NUD.png" alt="docker-api front-end"></li>
+</ul>
+<h1 id="开始"><a href="#开始" class="headerlink" title="开始"></a>开始</h1><h2 id="使用-Jupyter-Notebook-的依赖项-注意，如果不存在-CUDA-GPU，它将默认使用-CPU（速度慢）"><a href="#使用-Jupyter-Notebook-的依赖项-注意，如果不存在-CUDA-GPU，它将默认使用-CPU（速度慢）" class="headerlink" title="使用 Jupyter Notebook 的依赖项 - 注意，如果不存在 CUDA GPU，它将默认使用 CPU（速度慢）"></a>使用 Jupyter Notebook 的依赖项 - 注意，如果不存在 CUDA GPU，它将默认使用 CPU（速度慢）</h2><p>创建一个新的虚拟 python 环境。</p>
+<p><code>python3 -m venv venv</code></p>
+<p>激活环境</p>
+<p><code>source venv/bin/activate</code></p>
+<p>安装依赖项</p>
+<p><code>pip3 install -r requirements.txt</code></p>
+<h2 id="使用预构建-docker-镜像的-API-使用"><a href="#使用预构建-docker-镜像的-API-使用" class="headerlink" title="使用预构建 docker 镜像的 API 使用"></a>使用预构建 docker 镜像的 API 使用</h2><h3 id="拉取最新的构建镜像"><a href="#拉取最新的构建镜像" class="headerlink" title="拉取最新的构建镜像"></a>拉取最新的构建镜像</h3><p><code>docker pull deusnexus/emotion_classification:latest</code></p>
+<h3 id="运行容器"><a href="#运行容器" class="headerlink" title="运行容器"></a>运行容器</h3><p><code>docker run --name emotion_prediction_container -p 8000:8000 emotion_prediction_fastapi:latest</code></p>
+<h3 id="在本地主机上打开-API"><a href="#在本地主机上打开-API" class="headerlink" title="在本地主机上打开 API"></a>在本地主机上打开 API</h3><p><code>http://127.0.0.1:8000</code></p>
+<h1 id="Reflection"><a href="#Reflection" class="headerlink" title="Reflection"></a>Reflection</h1><p>最初，使用 CUDA 驱动程序很麻烦，而且要反复试验才能让我的 NVIDIA GPU 正常工作，这是我面临的最大挑战。在使用卷积神经网络开发情感分析的过程中，我了解了模型架构（卷积层/最大池/dropout/批量归一化）、优化器和损失函数。</p>
+<p>此外，如何使用不同的指标来衡量模型性能，以捕获训练历史并评估所使用的所有不同参数的影响。我的目标是创建一个以清晰且针对特定目的的方式组织的项目结构，并将权重和捕获的模型指标保存在指定的文件夹和文件中。通过这个过程，我更好地了解了如何以迭代方式保存和训练模型，以及如何在后期训练中恢复模型并与架构或仅训练的权重一起保存，以及如何使用这些文件。</p>
+<p>我们发现，以 RGB 颜色训练时，包含大部分灰度图像和次要部分 RGB 图像的图像数据集似乎仍然表现更好。通过阅读不同的文献和在线材料，我了解了 dropout 和批量归一化如何显着提高泛化能力和性能。</p>
+<p>使用不同的可视化对我训练的模型进行评估；例如，混淆矩阵、分类报告（f1 分数、召回率、精确度、准确度）让我很好地了解了模型的表现、意味着什么并确定了潜在的改进领域。通过图像增强平衡数据集让我学会了如何平衡图像类，但是它并没有显着改善我的不平衡数据集，这肯定是我在未来项目中更多探索和优化的领域。</p>
+<p>最后，使用 FastAPI 和 Docker 构建一个简单的 api， 让我从用户的角度思考，调用 API 或使用前端网站与我训练的模型进行交互。</p>
+<h1 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h1><p>该项目基于评估整个测试集，使用不平衡模型对情感图像进行了平均 63.52% 的分类。(<a href="https://www.kaggle.com/datasets/mahmoudima/mma-facial-expression/code">https://www.kaggle.com/datasets/mahmoudima/mma-facial-expression/code</a>). </p>
+]]></content>
       <categories>
-        <category>教程</category>
-        <category>Jieba</category>
+        <category>学习</category>
+        <category>Python</category>
       </categories>
       <tags>
-        <tag>demo</tag>
-        <tag>Jieba</tag>
-        <tag>主题</tag>
+        <tag>Python</tag>
+        <tag>Tensorflow</tag>
       </tags>
   </entry>
 </search>
