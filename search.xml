@@ -1021,7 +1021,7 @@ pie
 <p><code>source venv/bin/activate</code></p>
 <p>安装依赖项</p>
 <p><code>pip3 install -r requirements.txt</code></p>
-<h2 id="使用预构建-docker-镜像的-API-使用"><a href="#使用预构建-docker-镜像的-API-使用" class="headerlink" title="使用预构建 docker 镜像的 API 使用"></a>使用预构建 docker 镜像的 API 使用</h2><h3 id="拉取最新的构建镜像"><a href="#拉取最新的构建镜像" class="headerlink" title="拉取最新的构建镜像"></a>拉取最新的构建镜像</h3><p><code>docker pull deusnexus/emotion_classification:latest</code></p>
+<h2 id="使用预构建-docker-镜像的-API-使用"><a href="#使用预构建-docker-镜像的-API-使用" class="headerlink" title="使用预构建 docker 镜像的 API 使用"></a>使用预构建 docker 镜像的 API 使用</h2><h3 id="拉取最新的构建镜像"><a href="#拉取最新的构建镜像" class="headerlink" title="拉取最新的构建镜像"></a>拉取最新的构建镜像</h3><p><code>docker pull dadazhang55/emotion_tensorflow:latest</code></p>
 <h3 id="运行容器"><a href="#运行容器" class="headerlink" title="运行容器"></a>运行容器</h3><p><code>docker run --name emotion_prediction_container -p 8000:8000 emotion_prediction_fastapi:latest</code></p>
 <h3 id="在本地主机上打开-API"><a href="#在本地主机上打开-API" class="headerlink" title="在本地主机上打开 API"></a>在本地主机上打开 API</h3><p><code>http://127.0.0.1:8000</code></p>
 <h1 id="Reflection"><a href="#Reflection" class="headerlink" title="Reflection"></a>Reflection</h1><p>最初，使用 CUDA 驱动程序很麻烦，而且要反复试验才能让我的 NVIDIA GPU 正常工作，这是我面临的最大挑战。在使用卷积神经网络开发情感分析的过程中，我了解了模型架构（卷积层/最大池/dropout/批量归一化）、优化器和损失函数。</p>
