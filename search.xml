@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title></title>
+    <title>Rust 学习笔记（一）</title>
     <url>/2024/06/04/Rust_stu_one/</url>
     <content><![CDATA[<h1 id="Rust-学习笔记（一）"><a href="#Rust-学习笔记（一）" class="headerlink" title="Rust 学习笔记（一）"></a>Rust 学习笔记（一）</h1><h2 id="变量绑定与解构"><a href="#变量绑定与解构" class="headerlink" title="变量绑定与解构"></a><a href="https://course.rs/basic/variable.html#变量绑定与解构">变量绑定与解构</a></h2><h2 id="变量命名"><a href="#变量命名" class="headerlink" title="变量命名"></a><a href="https://course.rs/basic/variable.html#变量命名">变量命名</a></h2><p>在命名方面，和其它语言没有区别，不过当给变量命名时，需要遵循 <a href="https://course.rs/practice/naming.html">Rust 命名规范</a>。</p>
 <blockquote>
@@ -235,6 +235,13 @@
 <p>下面的函数创建了一个无限循环，该循环永不跳出，因此函数也永不返回：</p>
 <figure class="highlight rust"><table><tr><td class="code"><pre><span class="line"><span class="keyword">fn</span> <span class="title function_">forever</span>() <span class="punctuation">-&gt;</span> ! &#123;</span><br><span class="line">  <span class="keyword">loop</span> &#123;</span><br><span class="line">    <span class="comment">//...</span></span><br><span class="line">  &#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 ]]></content>
+      <categories>
+        <category>学习</category>
+      </categories>
+      <tags>
+        <tag>学习</tag>
+        <tag>Rust</tag>
+      </tags>
   </entry>
   <entry>
     <title>这是一个demo</title>
